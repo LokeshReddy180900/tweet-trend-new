@@ -60,7 +60,7 @@ environment {
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "maven-libs-release-local/{1}",
+                              "target": "maven1-libs-release-local/",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
