@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'maven-slave'
+            label 'maven'
         }
 environment {
     PATH = "/opt/apache-maven-3.9.4/bin:$PATH"
