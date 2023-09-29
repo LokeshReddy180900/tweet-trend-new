@@ -100,12 +100,12 @@ environment {
         }
     }
 
-    stage ("Deploy") {
-      steps {
-        script {
-          sh './deploy.sh'
+    stage (" deployment "){
+        steps {
+            script {
+                sh 'helm install ttrend-v2 ttrend-0.1.0.tgz'
+            }
         }
-      }
     }
 
 
