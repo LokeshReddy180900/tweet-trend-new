@@ -1,15 +1,15 @@
-def registry = "https://lokesh1809.jfrog.io"
+/*def registry = "https://lokesh1809.jfrog.io"
 def imageName = 'lokesh1809.jfrog.io/valaxy-docker-local/ttrend'
-def version   = '2.1.3'
+def version   = '2.1.3' */
 pipeline {
     agent {
         node {
             label 'maven'
         }
     }
-environment {
+/*environment {
     PATH = "/opt/apache-maven-3.9.4/bin:$PATH"
-}
+} */
         
     
 
@@ -22,7 +22,7 @@ environment {
             }
         }
 
-        stage("test"){
+      /*  stage("test"){
             steps{
                 echo "----unit test started----"
                 sh 'mvn surefire-report:report'
@@ -52,7 +52,7 @@ environment {
 }
     }
   }
-  stage("Jar Publish") {
+    stage("Jar Publish") {
         steps {
             script {
                     echo '<--------------- Jar Publish Started --------------->'
@@ -76,7 +76,8 @@ environment {
             
             }
         }   
-    }   
+    }
+       
 
     stage(" Docker Build ") {
       steps {
@@ -88,7 +89,9 @@ environment {
       }
     }
 
-            stage (" Docker Publish "){
+
+
+    stage (" Docker Publish "){
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
@@ -100,13 +103,15 @@ environment {
         }
     }
 
+
+
     stage (" deployment "){
         steps {
             script {
                 sh 'helm install ttrend-v2 ttrend-0.1.0.tgz'
             }
         }
-    }
+    } */
 
 
        
